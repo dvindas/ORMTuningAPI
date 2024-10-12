@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: ORMTuningAPI
+
+  threads:
+    virtual:
+      enabled: true
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: secret
+
+  jpa:
+    hibernate:
+      ddl-auto: none  # Prevents Hibernate from interfering with the schema.sql execution
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  sql:
+    init:
+      mode: always  # Ensures that both schema.sql and data.sql are executed
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console  # Enable H2 console for viewing the database
