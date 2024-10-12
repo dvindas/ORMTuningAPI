@@ -24,3 +24,12 @@ For more details please check my [post on medium.com](https://medium.com/@dperez
    ```bash
    git clone https://github.com/dvindas/ORMTuningAPI.git
    cd ormtunningapi
+
+## Test Endpoints
+
+To test the operation you can use:
+
+You can send the following query modes: NORMAL_QUERY_MODE = 1, FETCH_QUERY_MODE = 2, ENTITY_GRAPH_QUERY_MODE = 3;
+
+```bash
+curl -X GET "http://localhost:8080/reports/invoices/excel?accountNumber=ZXY-234&queryMode=2" -H "Accept: application/json"
